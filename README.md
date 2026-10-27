@@ -48,8 +48,7 @@ The dashboard has filters for Market Region, Battery Type and Model Year, and th
 
 ## Files
 - `screenshots/`: images of each visual, the dashboard and the story
-- `[workbook file, if included]`
-- Dataset: [link or note, since the files are large]
+- Dataset: `ev_market_train.csv` and `ev_market_test.csv` are not included in this repository because of their size (200,000 and 100,000 rows). The full workbook with the data is available on Tableau Public (see the live demo link above).
 
 ## Author
 Ujjawal Rathod
