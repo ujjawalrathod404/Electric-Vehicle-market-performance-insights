@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EV Market Performance &amp; Insights</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top">EV Market Insights</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#story">Story</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Which electric vehicles sell, who builds them, and what drives them?</h1>
+      <p>An interactive Tableau analysis of 300,000 EV models: sales by category, manufacturer share,
+         battery technology, driving range, manufacturing countries and customer ratings.</p>
+      <div class="actions">
+        <a class="btn primary" href="#dashboard">Open the dashboard</a>
+        <a class="btn" href="#story">Read the story</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Who this is for</h2>
+      <div class="people">
+        <article>
+          <h3>Emily Johnson</h3>
+          <p>Market Strategy Director. Needs to know which categories drive sales and where satisfaction is highest.</p>
+        </article>
+        <article>
+          <h3>David Chen</h3>
+          <p>Business Intelligence Manager. Compares manufacturers, battery technologies and production countries.</p>
+        </article>
+        <article>
+          <h3>Dr. Sarah Williams</h3>
+          <p>Mobility researcher. Looks at how battery type, range and satisfaction relate across vehicle categories.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="dashboard" class="viz">
+      <h2>Dashboard</h2>
+      <p class="hint">Use the filters on the right, or click a country, battery slice or category bar to filter the other charts.</p>
+      <div class="frame">
+        <iframe src="{{ dashboard_url }}" title="EV Market Dashboard" loading="lazy" height="1550"></iframe>
+      </div>
+    </section>
+
+    <section id="story" class="viz">
+      <h2>Story</h2>
+      <p class="hint">Four points: an overview, then one for each stakeholder.</p>
+      <div class="frame">
+        <iframe src="{{ story_url }}" title="EV Market Story" loading="lazy" height="900"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with Tableau Public and Flask.</p>
+  </footer>
+</body>
+</html>
