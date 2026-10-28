@@ -4,7 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EV Market Performance &amp; Insights</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+:root {
+  --ink: #12231f;
+  --muted: #4d625c;
+  --paper: #f6f8f7;
+  --panel: #ffffff;
+  --line: #d5dfdb;
+  --accent: #0f7b5f;
+  --accent-dark: #0a5a45;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px clamp(16px, 4vw, 48px);
+  background: var(--ink); color: #fff;
+}
+.brand { color: #fff; font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+.topbar nav { display: flex; gap: 22px; }
+.topbar nav a { color: #cfe3dc; text-decoration: none; }
+.topbar nav a:hover, .topbar nav a:focus-visible { color: #fff; text-decoration: underline; }
+
+main { max-width: 1480px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
+
+.hero { padding: clamp(48px, 9vw, 110px) 0 48px; max-width: 760px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.12; margin: 0 0 20px; letter-spacing: -0.02em; }
+.hero p { font-size: 1.15rem; color: var(--muted); margin: 0 0 28px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block; padding: 12px 22px; border-radius: 6px;
+  border: 1.5px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 600;
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn:focus-visible, a:focus-visible { outline: 3px solid #f0b429; outline-offset: 2px; }
+
+h2 { font-size: 1.7rem; margin: 0 0 8px; }
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+.people article { padding: 4px 0 4px 18px; border-left: 4px solid var(--accent); }
+.people h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.people p { margin: 0; color: var(--muted); }
+
+.hint { color: var(--muted); margin: 0 0 18px; }
+.frame { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+.frame iframe { display: block; width: 100%; min-width: 1100px; border: 0; }
+
+footer { text-align: center; padding: 32px 16px 48px; color: var(--muted); border-top: 1px solid var(--line); }
+
+@media (max-width: 600px) {
+  .topbar nav { gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+</style>
 </head>
 <body>
   <header class="topbar">
