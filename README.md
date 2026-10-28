@@ -4,6 +4,7 @@ An interactive Tableau dashboard and data story analysing the global electric ve
 
 **Live demo:** https://public.tableau.com/app/profile/ujjawal.rathod4051/viz/ElectricVehicleMarketPerformanceInsights_17931389708610/EVMarketStory
 **Web app:** https://electric-vehicle-market-performance.vercel.app/
+**explanation Video for the project's end-to-end solution** https://drive.google.com/file/d/15fTHUReNcgIb_R9f5zGsM8mSkBoZ724p/view?usp=sharing
 
 ## Problem Statement
 Three stakeholders need data-driven insight into the EV market:
