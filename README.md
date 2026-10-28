@@ -3,6 +3,7 @@
 An interactive Tableau dashboard and data story analysing the global electric vehicle (EV) market across vehicle categories, manufacturers, battery technologies, manufacturing countries and customer satisfaction.
 
 **Live demo:** https://public.tableau.com/app/profile/ujjawal.rathod4051/viz/ElectricVehicleMarketPerformanceInsights_17931389708610/EVMarketStory
+**Web app:** https://electric-vehicle-market-performance.vercel.app/
 
 ## Problem Statement
 Three stakeholders need data-driven insight into the EV market:
